@@ -2,7 +2,12 @@ red = imread('red.jpg');
 green = imread('green.jpg');
 blue = imread('blue.jpg');
 
-[XR, YR] = size(red)
-I2 = imcrop(green,[1 1 1196-1 1068-1]);
-figure,imshow(green);
-figure,imshow(I2);
+[xr, yr] = size(red);
+[xg, yg] = size(green);
+[xb, yb] = size(blue);
+
+
+min_x = min([xr, xg, xb]);
+min_y = min([yr, yg, yb])/3;
+
+%im = imcrop(green,[x1 y1 x2 y2]);
