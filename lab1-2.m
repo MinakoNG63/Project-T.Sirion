@@ -4,10 +4,10 @@ im_red = double(imread('red.jpg'));
 im_green = double(imread('green.jpg'));
 im_blue = double(imread('blue.jpg'));
 
-figure;
-subplot 131; imshow(im_red./255); %subplot xyp : p = position 
-subplot 132; imshow(im_green./255); %ต้องหาร./255 เพราะ ใช้ double
-subplot 133; imshow(im_blue./255);
+%figure;
+%subplot 131; imshow(im_red./255); %subplot xyp : p = position 
+%subplot 132; imshow(im_green./255); %ต้องหาร./255 เพราะ ใช้ double
+%subplot 133; imshow(im_blue./255);
 
 % specify image width and height
 im_width = 1000;
