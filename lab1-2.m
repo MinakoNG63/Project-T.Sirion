@@ -44,10 +44,6 @@ h_down = abs(h-im_height) - h_up+1;
 
 cim_blue = im_blue(h_up:h-h_down, w_left:w-w_right);
 
-figure;
-subplot 131; imshow(cim_red./255);
-subplot 132; imshow(cim_green./255);
-subplot 133; imshow(cim_blue./255);
 
 % define step range
 MAX_STEPS = 100; 
@@ -133,14 +129,13 @@ im_result(1:im_height-start_rows, 1:im_width-start_cols,2) =  cim_green(start_ro
 start_rows = blue_rows - (im_height/2 - MAX_STEPS);
 start_cols = blue_cols - (im_width/2 - MAX_STEPS);
 im_result(1:im_height-start_rows, 1:im_width-start_cols,3) =  cim_blue(start_rows:im_height-1, start_cols:im_height-1);
-figure; 
-subplot 151; imshow(red_patch./255);
-subplot 152; imshow(cim_green(green_rows:green_rows+(MAX_STEPS*2)-1, green_cols:green_cols+(MAX_STEPS*2)-1)./255);
-subplot 153; imshow(cim_blue(blue_rows:blue_rows+(MAX_STEPS*2)-1, blue_cols:blue_cols+(MAX_STEPS*2)-1)./255);
-subplot 154; imshow(patch_result./255);
-subplot 155; imshow(im_result./255);
+
+%figure; 
+%subplot 151; imshow(red_patch./255);
+%subplot 152; imshow(cim_green(green_rows:green_rows+(MAX_STEPS*2)-1, green_cols:green_cols+(MAX_STEPS*2)-1)./255);
+%subplot 153; imshow(cim_blue(blue_rows:blue_rows+(MAX_STEPS*2)-1, blue_cols:blue_cols+(MAX_STEPS*2)-1)./255);
+%subplot 154; imshow(patch_result./255);
+%subplot 155; imshow(im_result./255);
 
 figure, imshow(im_result./255);
 pause; close all;
-
-
